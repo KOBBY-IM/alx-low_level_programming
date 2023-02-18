@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - print 0-9 seperated by commas
- * return: always 0
+ *main - print 0-9 separated by commas
+ *Return: Always 0 (Success)
  */
 
 int main(void)
