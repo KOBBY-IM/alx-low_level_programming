@@ -1,5 +1,5 @@
 #include <main.h>
-
+#include <stdio.h>
 
 /**
 *main- print the word _Putchar and end in a newline
