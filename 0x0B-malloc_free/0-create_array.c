@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * *create_array - function to create arrary of charcters
+ * create_array - function to create arrary of charcters
  * @size : size of array
  * @c : character to fill array
  *
@@ -10,25 +10,26 @@
 
 char *create_array(unsigned int size, char c)
 {
-	char *a;
+	char *c;
 	unsigned int i;
 
 	if (size <= 0)
 		return (NULL);
 
 
-	a = malloc(size * sizeof(a));
+	c = malloc(size * sizeof(a));
 
-	if (a == 0)
+	if (c == 0)
 		return (NULL);
 
 	for (i = 0; i < size; i++)
-		a[i] = c;
-	
-	return (a);
+		c[i] = c;
+
+	return (c);
 
 
-	/*if (size == 0)
+	/**
+	 if (size == 0)
 		return (NULL);
 
 	a = malloc(size * sizeof(*a));
@@ -38,6 +39,7 @@ char *create_array(unsigned int size, char c)
 	for (i = 0; i < size; i++)
 		a[i] = c; 
 
-	return (a);*/
+	return (a);
+		*/
 
 }
