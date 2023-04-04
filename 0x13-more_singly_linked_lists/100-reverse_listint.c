@@ -4,6 +4,7 @@
  * reverse_listint - func that reverses a listint_t list
  * @head: pointer to the the head of list
  *
+ * Return: pointer to 1st node of rev list
  */
 
 listint_t *reverse_listint(listint_t **head)
@@ -11,7 +12,7 @@ listint_t *reverse_listint(listint_t **head)
 	listint_t *next;
 	listint_t *prev;
 
-	if (head == NULL || *head == NULL)
+	if (head == NULL || *head == NULL) /* check if list is empty */
 		return (NULL);
 
 	prev = NULL;
