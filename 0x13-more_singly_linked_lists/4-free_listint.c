@@ -14,10 +14,10 @@ void free_listint(listint_t *head)
 	if (head == NULL) /* check for no linked list */
 		return;
 
-	while (head != NULL)
+	while (head != NULL) /* iterate to keep track of list and free */
 	{
 		current = head;
-		head = head->next;
+		head = head->next; /* shift to next node and pointer free */
 		free(current);
 	}
 }
