@@ -1,12 +1,12 @@
 #include "lists.h"
 
 /**
- * free_listint - func that frees a listint_t list
+ * free_listint2 - func that frees a listint_t list
  * @head: pointer to the head of list
  *
  */
 
-void free_listint(listint_t *head)
+void free_listint2(listint_t **head)
 {
 	listint_t *current;
 	/* listint_t *temp; */
