@@ -8,17 +8,21 @@
 
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *current = *head;
-	listint_t *prev = NULL;
+	listint_t *next;
+	listint_t *prev;
 
-	while (current != NULL) /* iterate thru the linked list */
+	if (head == NULL || *head == NULL)
+		return (NULL);
+
+	prev = NULL;
+	while (*head != NULL) /* iterate thru the linked list */
 	{
-		listint_t *next = current->next; /* keep track of next node */
+		next = (*head)->next; /* keep track of next node */
 
-		current->next = prev; /* reverse link btw current and previous node */
+		(*head)->next = prev; /* reverse link btw current and previous node */
 
-		prev = current; /* move to next mode */
-		current = next;
+		prev = *head; /* move to next mode */
+		*head = next;
 	}
 	*head = prev; /* up head pointer to new 1st node */
 
