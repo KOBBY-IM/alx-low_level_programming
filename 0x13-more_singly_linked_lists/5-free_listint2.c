@@ -9,7 +9,6 @@
 void free_listint2(listint_t **head)
 {
 	listint_t *current;
-	/* listint_t *temp; */
 
 	if (head == NULL) /* check for no linked list */
 		return;
@@ -20,4 +19,5 @@ void free_listint2(listint_t **head)
 		head = head->next; /* shift to next node and pointer free earlier node */
 		free(current);
 	}
+	head = NULL;
 }
