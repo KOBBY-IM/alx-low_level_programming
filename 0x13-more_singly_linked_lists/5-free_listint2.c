@@ -13,11 +13,11 @@ void free_listint2(listint_t **head)
 	if (head == NULL) /* check for no linked list */
 		return;
 
-	while (head != NULL) /* iterate to keep track of list and free */
+	while (head != NULL) /* iterate to keep track of nodes and free */
 	{
-		current = head;
-		head = head->next; /* shift to next node and pointer free earlier node */
+		current = *head;
+		*head = (current)->next; /* shift to next node and pointer free earlier node */
 		free(current);
 	}
-	head = NULL;
+	*head = NULL;
 }
