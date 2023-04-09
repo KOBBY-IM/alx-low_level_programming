@@ -1,27 +1,18 @@
 #include "main.h"
 
 /**
- * flip_bits - determine how many bits to flip to get from one num to another
- * @n: number
- * @m: number2
+ * get_endianness - check endianness
  *
- * Return: how many bits differ
+ * Return: 0 if big endian, or 1 if little endian
  */
 
-unsigned int flip_bits(unsigned long int n, unsigned long int m)
+int get_endianness(void)
 {
-	unsigned int diff_bits = 0;
-	unsigned long int difference;
+	int num;
 
-	/* Xor both nums to show bit 1 if different bits */
-	difference = n ^ m;
-
-	/* keep shifting difference to right and tallying the ones up */
-	do {
-		diff_bits += (difference & 1);
-		difference >>= 1;
-	} while
-		(difference > 0);
-
-	return (diff_bits);
+	num = 1;
+	if (*(char *)&num == 1)
+		return (1);
+	else
+		return (0);
 }
