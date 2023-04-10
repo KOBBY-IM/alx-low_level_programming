@@ -9,11 +9,11 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int len = 0;
-	unsigned int sum = 0, i;
+	int len = 0, i;
+	unsigned int sum = 0, pow_of_2 = 1;
 
 	if (b == NULL)
-		return (0);
+		return (sum);
 
 	/* find string length */
 	while (b[len] != '\0')
@@ -29,7 +29,7 @@ unsigned int binary_to_uint(const char *b)
 			return (sum);
 
 		if (b[i] == '1')
-			sum += (1 * (1 << len));
+			sum += pow_of_2 << len;
 		i++;
 		len--;
 	}
