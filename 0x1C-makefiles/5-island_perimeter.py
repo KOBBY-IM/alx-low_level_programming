@@ -12,7 +12,7 @@ def island_perimeter(grid):
         The perimeter of the island.
     """
 
-     count = 0
+    count = 0
     max_grid = len(grid) > 100 if len(grid) == 100 else len(grid)
     for row in range(max_grid):
         max_row = len(grid[row]) > 100 \
